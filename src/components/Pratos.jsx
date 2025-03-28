@@ -16,7 +16,7 @@ const MenuItem = ({ img, alt, title }) => {
         alt={alt}
         className="w-32 h-32 rounded-full object-cover mb-2 transition-transform duration-300 group-hover:scale-110"
       />
-      <p className="text-black font-semibold text-xl mt-2 group-hover:text-yellow-500 transition-colors duration-300">
+      <p className="text-black font-semibold text-xl mt-2 group-hover:text-brightColor transition-colors duration-300">
         {title}
       </p>
     </div>
@@ -43,7 +43,6 @@ const Dishes = () => {
 
         {/* Menu de itens com imagens e descrição */}
         <div className="max-w-screen-xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 relative z-10">
-
           <MenuItem img={img1} alt="Ave" title="Ave" />
           <MenuItem img={img2} alt="Bovina" title="Bovina" />
           <MenuItem img={img3} alt="Peixe" title="Peixe" />

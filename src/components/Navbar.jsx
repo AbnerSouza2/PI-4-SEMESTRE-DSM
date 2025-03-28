@@ -56,20 +56,22 @@ const Modal = ({ isOpen, closeModal }) => {
           />
           <div className="flex justify-center mb-6">
             <button
-              className={`px-4 py-2 text-lg font-semibold transition-all ${isLogin
+              className={`px-4 py-2 text-lg font-semibold transition-all ${
+                isLogin
                   ? "border-b-4 border-brightColor text-brightColor"
                   : "text-gray-500"
-                } rounded-xl`}
+              } rounded-xl`}
               onClick={() => setIsLogin(true)}
               aria-selected={isLogin}
             >
               Login
             </button>
             <button
-              className={`px-4 py-2 text-lg font-semibold transition-all ${!isLogin
+              className={`px-4 py-2 text-lg font-semibold transition-all ${
+                !isLogin
                   ? "border-b-4 border-brightColor text-brightColor"
                   : "text-gray-500"
-                } rounded-xl`}
+              } rounded-xl`}
               onClick={() => setIsLogin(false)}
               aria-selected={!isLogin}
             >
@@ -96,7 +98,7 @@ const Modal = ({ isOpen, closeModal }) => {
                   required
                 />
                 <span className="text-sm text-gray-600 mt-2 block">
-                  Esqueci minha senha {" "}
+                  Esqueci minha senha{" "}
                   <a
                     href="#"
                     className="text-orange-500 hover:underline font-medium"
@@ -211,6 +213,25 @@ const Modal = ({ isOpen, closeModal }) => {
                     />
                   </div>
                 </div>
+                {/* Campos de Senha e Confirmar Senha */}
+                <div className="flex flex-col md:flex-row gap-4">
+                  <div className="w-full">
+                    <input
+                      type="password"
+                      placeholder="Senha"
+                      className="border p-3 rounded-lg focus:ring-2 focus:ring-brightColor outline-none w-full"
+                      required
+                    />
+                  </div>
+                  <div className="w-full">
+                    <input
+                      type="password"
+                      placeholder="Confirmar Senha"
+                      className="border p-3 rounded-lg focus:ring-2 focus:ring-brightColor outline-none w-full"
+                      required
+                    />
+                  </div>
+                </div>
                 <button
                   type="submit"
                   className="bg-brightColor text-white py-3 rounded-xl shadow-md hover:bg-gray-600 hover:text-white transition-colors duration-300 flex items-center justify-center gap-2"
@@ -255,23 +276,108 @@ const Navbar = () => {
             <h1 className="text-xl font-semibold">LeveFit</h1>
           </div>
           <nav className="hidden md:flex flex-row items-center text-lg font-medium gap-8">
-            <Link to="home" spy smooth duration={500} className="hover:text-brightColor transition-all cursor-pointer">Home</Link>
+            <Link
+              to="home"
+              spy
+              smooth
+              duration={500}
+              className="hover:text-brightColor transition-all cursor-pointer"
+            >
+              Home
+            </Link>
             <div className="relative group">
               <div className="flex items-center gap-1">
-                <Link to="dishes" spy smooth duration={500} className="hover:text-brightColor transition-all cursor-pointer">Pratos</Link>
+                <Link
+                  to="dishes"
+                  spy
+                  smooth
+                  duration={500}
+                  className="hover:text-brightColor transition-all cursor-pointer"
+                >
+                  Pratos
+                </Link>
                 <BiChevronDown className="cursor-pointer" size={25} />
               </div>
               <ul className="absolute hidden space-y-2 group-hover:block bg-white border border-gray-300 rounded-lg p-5">
-                <li><Link to="dishes" spy smooth duration={500} className="text-gray-800 hover:text-brightColor transition-all cursor-pointer">Ave</Link></li>
-                <li><Link to="dishes" spy smooth duration={500} className="text-gray-800 hover:text-brightColor transition-all cursor-pointer">Bovina</Link></li>
-                <li><Link to="dishes" spy smooth duration={500} className="text-gray-800 hover:text-brightColor transition-all cursor-pointer">Peixe</Link></li>
-                <li><Link to="dishes" spy smooth duration={500} className="text-gray-800 hover:text-brightColor transition-all cursor-pointer">Avaliados</Link></li>
+                <li>
+                  <Link
+                    to="dishes"
+                    spy
+                    smooth
+                    duration={500}
+                    className="text-gray-800 hover:text-brightColor transition-all cursor-pointer"
+                  >
+                    Ave
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="dishes"
+                    spy
+                    smooth
+                    duration={500}
+                    className="text-gray-800 hover:text-brightColor transition-all cursor-pointer"
+                  >
+                    Bovina
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="dishes"
+                    spy
+                    smooth
+                    duration={500}
+                    className="text-gray-800 hover:text-brightColor transition-all cursor-pointer"
+                  >
+                    Peixe
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="dishes"
+                    spy
+                    smooth
+                    duration={500}
+                    className="text-gray-800 hover:text-brightColor transition-all cursor-pointer"
+                  >
+                    Avaliados
+                  </Link>
+                </li>
               </ul>
             </div>
-            <Link to="about" spy smooth duration={500} className="hover:text-brightColor transition-all cursor-pointer">Sobre</Link>
-            <Link to="menu" spy smooth duration={500} className="hover:text-brightColor transition-all cursor-pointer">Destaques</Link>
-            <Link to="review" spy smooth duration={500} className="hover:text-brightColor transition-all cursor-pointer">Avaliações</Link>
-            <button onClick={openModal} className="px-6 py-1 border-2 border-brightColor text-brightColor hover:bg-brightColor hover:text-white transition-all rounded-full">Login</button>
+            <Link
+              to="about"
+              spy
+              smooth
+              duration={500}
+              className="hover:text-brightColor transition-all cursor-pointer"
+            >
+              Sobre
+            </Link>
+            <Link
+              to="menu"
+              spy
+              smooth
+              duration={500}
+              className="hover:text-brightColor transition-all cursor-pointer"
+            >
+              Destaques
+            </Link>
+            <Link
+              to="review"
+              spy
+              smooth
+              duration={500}
+              className="hover:text-brightColor transition-all cursor-pointer"
+            >
+              Avaliações
+            </Link>
+            <button
+              onClick={openModal}
+              className="px-6 py-1 border-2 border-brightColor text-brightColor hover:bg-brightColor hover:text-white transition-all rounded-full"
+            >
+              Login
+            </button>
           </nav>
           <div className="md:hidden flex items-center">
             {menu ? (
